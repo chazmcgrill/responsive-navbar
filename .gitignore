@@ -35,4 +35,7 @@ Temporary Items
 ### Node Modules ###
 node_modules
 
+### Codekit ###
+config.codekit3
+
 # End of https://www.gitignore.io/api/osx,sass
