@@ -1,33 +1,40 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:500");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 html {
-  font-family: Roboto;
-  font-size: 20px; }
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px; }
 
 body {
   margin: 0; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
 header {
   padding: 15px 10px;
-  background: coral; }
-
-nav {
+  background: coral;
   position: relative; }
 
 .logo {
   margin-bottom: 5px; }
+  .logo h2 {
+    margin: 0; }
+
+nav {
+  display: none;
+  transition: all 1s; }
 
 ul {
   list-style: none;
   text-align: center;
-  padding-left: 0; }
+  padding-left: 0;
+  margin: 20px 0 0; }
   ul li {
-    margin-bottom: 10px; }
-
-h2 {
-  margin: 0; }
-
-.hidden {
-  display: none; }
+    margin-bottom: 20px; }
+    ul li:hover {
+      color: #3c3b3b; }
+    ul li:last-of-type {
+      margin-bottom: 10px; }
 
 .hamburger {
   cursor: pointer;
@@ -56,9 +63,7 @@ h2 {
   background-color: #000;
   border-radius: 4px;
   position: absolute;
-  transition-property: transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease; }
+  transition: transform 0.15s ease; }
 
 .hamburger-inner::before, .hamburger-inner::after {
   content: "";
@@ -98,7 +103,19 @@ h2 {
 .hamburger-container {
   position: absolute;
   right: 5px;
-  top: 20px; }
+  top: 22px; }
 
 button {
   outline: none; }
+
+@media screen and (min-width: 640px) {
+  .hamburger {
+    display: none; }
+  nav {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 5px; }
+  ul li {
+    display: inline-block;
+    margin-left: 12px; } }
