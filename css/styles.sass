@@ -21,10 +21,14 @@ header
 
   h2
     margin: 0
+    font-weight: 500
 
 nav
+  // display: none
+  transition: all 0.3s
+
+.hidden
   display: none
-  transition: all 1s
 
 ul
   list-style: none
@@ -53,6 +57,9 @@ button
 
 @media screen and (min-width: 640px)
 
+  html
+    font-size: 16px
+
   .hamburger
     display: none
 
@@ -60,7 +67,7 @@ button
     display: block
     position: absolute
     right: 10px
-    top: 5px
+    top: 2px
 
   ul li
     display: inline-block

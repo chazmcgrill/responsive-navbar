@@ -18,11 +18,14 @@ header {
 .logo {
   margin-bottom: 5px; }
   .logo h2 {
-    margin: 0; }
+    margin: 0;
+    font-weight: 500; }
 
 nav {
-  display: none;
-  transition: all 1s; }
+  transition: all 0.3s; }
+
+.hidden {
+  display: none; }
 
 ul {
   list-style: none;
@@ -109,13 +112,15 @@ button {
   outline: none; }
 
 @media screen and (min-width: 640px) {
+  html {
+    font-size: 16px; }
   .hamburger {
     display: none; }
   nav {
     display: block;
     position: absolute;
     right: 10px;
-    top: 5px; }
+    top: 2px; }
   ul li {
     display: inline-block;
     margin-left: 12px; } }
