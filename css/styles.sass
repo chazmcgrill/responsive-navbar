@@ -7,43 +7,37 @@ html
 body
   margin: 0
 
-a
-  text-decoration: none
-  color: inherit
-
 header
-  padding: 15px 10px
-  background: coral
   position: relative
-
-.logo
-  margin-bottom: 5px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  background: coral
+  padding: 15px 10px
 
   h2
     margin: 0
-    font-weight: 500
+
+  li
+    list-style: none
+    margin: 5px 0 5px
+
+  a
+    text-decoration: none
+    color: inherit
+    cursor: pointer
+    opacity: 1
+
+    &:hover
+      opacity: 0.7
 
 nav
-  // display: none
-  transition: all 0.3s
+  text-align: center
+  display: flex
+  flex-direction: column
 
 .hidden
   display: none
-
-ul
-  list-style: none
-  text-align: center
-  padding-left: 0
-  margin: 20px 0 0
-
-  li
-    margin-bottom: 20px
-
-    &:hover
-      color: #3c3b3b
-
-    &:last-of-type
-      margin-bottom: 10px
 
 @import './hamburger'
 
@@ -63,12 +57,14 @@ button
   .hamburger
     display: none
 
-  nav
-    display: block
-    position: absolute
-    right: 10px
-    top: 2px
+  header, nav
+    flex-direction: row
 
-  ul li
-    display: inline-block
-    margin-left: 12px
+  header
+    align-items: center
+
+    li
+      margin: 0 5px
+
+      &:last-of-type
+        margin-right: 0
